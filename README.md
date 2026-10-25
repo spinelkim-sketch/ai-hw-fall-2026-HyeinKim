@@ -20,7 +20,7 @@ python train.py --model cnn --augment
 ```
 
 ## Results
-Paste the contents of `results/summary.md` here after running.
+results/summary.md
 
 ## Notes
 - Reported accuracy is from the **final epoch**, not the best epoch, so the test set is not used to pick a result.
