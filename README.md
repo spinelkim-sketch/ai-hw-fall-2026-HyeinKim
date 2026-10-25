@@ -34,10 +34,24 @@ results/summary.md
 | transformer | yes | 72,074 | 96.40% | 256.8 |
 | transformer | no | 72,074 | 97.12% | 185.4 |
 
-Test accuracy is the share of the 10,000 test images the model identified correctly. Higher is better, and 99% means about 100 mistakes.
-Augmentation: yes/no shows whether the training images were randomly rotated and shifted. Compare the “yes” row with the “no” row for the same model. Did the number go up or down?
-Parameters is the model’s size. Bigger models are not always more accurate.
-Train time is how long training took.
+Test accuracy: the share of the 10,000 test images the model identified correctly. Higher is better, and 99% means about 100 mistakes.
+Augmentation: yes/no shows whether the training images were randomly rotated and shifted. 
+Parameters: the model’s size. Bigger models are not always more accurate.
+Train time: how long training took.
+
+**Disclaimer
+
+The Transformer explanation is a hypothesis. I didn’t test it, which is why the text says “a likely reason”. If you want to claim more, you could try training the Transformer for more epochs, for example python train.py --model transformer --epochs 30, and see whether the gap closes. That would also make a good extra slide.
+Each result comes from a single training run. Differences of a few hundredths of a percent can change if you retrain with a different random seed, which is why the text calls them “too small to call a real improvement”.
+
+**Key findings**
+
+- **The CNN performed best** at 99.39% accuracy (about 61 mistakes out of 10,000 test images). It is designed to look for local shapes such as edges and curves, which suits handwritten digits.
+- **Augmentation made almost no difference for the CNN and MLP.** Accuracy rose by only 0.06 and 0.03 percentage points, which is a handful of images and is too small to call a real improvement from a single run.
+- **Augmentation hurt the Transformer**, lowering accuracy from 97.12% to 96.40%. A likely reason is that this small model, trained for only 10 epochs, had trouble learning from the more varied images.
+- **The Transformer scored lowest overall** (96.40–97.12%). It is also the smallest model (72,074 parameters), and Transformers usually need more data or longer training to perform well on images.
+- **Augmentation increased training time** for every model, by roughly 40 to 70 seconds, because each training image is randomly transformed on the fly.
+- **Bigger was not better:** the MLP has about half the CNN's parameters, but its accuracy was about 1 percentage point lower.
 
 
 ## Notes
