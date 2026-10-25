@@ -1,12 +1,12 @@
 # MNIST digit recognition: MLP vs CNN vs Transformer
 Referenced examples from Claude and Gemini. Ran the test in Google Colab.
 
-Three small neural networks trained on the MNIST **train** split and evaluated on the **test** split.
+Three small neural networks trained on the MNIST (60,000 labeled digit images for studying) **train** split and evaluated on the 10,000 separate ones for the exam in **test** split.
 
 ## Models
-- **MLP**: one hidden layer (256 units). The simplest baseline; sees the image as a flat list of pixels.
-- **CNN**: two convolution layers + a small classifier. Looks for local patterns (edges, curves).
-- **Transformer (encoder)**: the image is cut into 4x4 patches, which are processed like words in a sentence.
+- **MLP**: Looks at the picture as one long list of 784 pixel values (28*28), with no acknowledgement of which pixels are adjacent to each other. 
+- **CNN**: two convolution layers + a small classifier. Looks for local patterns (edges, curves). This is like a magnifying glass over the image to spot edges and curves, and then combine them ("a loop on top+a straight line=9")
+- **Transformer (encoder)**: the image is cut into 49 small tiles and let the tiles decide what the whole picture shows. It is like chatGPT in image tile context. 
 
 ## Augmentation
 Small random rotations (±10°), shifts (10%) and zoom (90–110%) applied to **training images only**.
