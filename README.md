@@ -1,4 +1,5 @@
 # MNIST digit recognition: MLP vs CNN vs Transformer
+Referenced examples from Claude and Gemini. Ran the test in Google Colab.
 
 Three small neural networks trained on the MNIST **train** split and evaluated on the **test** split.
 
@@ -32,6 +33,11 @@ results/summary.md
 | mlp | no | 203,530 | 98.23% | 142.5 |
 | transformer | yes | 72,074 | 96.40% | 256.8 |
 | transformer | no | 72,074 | 97.12% | 185.4 |
+
+Test accuracy is the share of the 10,000 test images the model identified correctly. Higher is better, and 99% means about 100 mistakes.
+Augmentation: yes/no shows whether the training images were randomly rotated and shifted. Compare the “yes” row with the “no” row for the same model. Did the number go up or down?
+Parameters is the model’s size. Bigger models are not always more accurate.
+Train time is how long training took.
 
 
 ## Notes
