@@ -1,0 +1,60 @@
+{
+  "model": "cnn",
+  "augmentation": false,
+  "epochs": 10,
+  "parameters": 421642,
+  "final_test_accuracy": 99.33,
+  "train_seconds": 166.8,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.20644770228465398,
+      "test_acc": 98.22
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.06471068665683269,
+      "test_acc": 98.87
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.04534723596225182,
+      "test_acc": 99.02
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.03465764346321424,
+      "test_acc": 98.95
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.025726822020610173,
+      "test_acc": 99.2
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.019635966167226435,
+      "test_acc": 99.28
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.014655401788527768,
+      "test_acc": 99.28
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.012245399259620657,
+      "test_acc": 99.25
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.009020971199745932,
+      "test_acc": 99.31
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.008278515813623865,
+      "test_acc": 99.33
+    }
+  ]
+}
