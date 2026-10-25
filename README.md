@@ -17,7 +17,10 @@ pip install -r requirements.txt
 ./run_all.sh            # all 6 experiments, then writes results/summary.md
 # or a single one:
 python train.py --model cnn --augment
+pip install -r requirements.txt
+python train_test.py
 ```
+train_test.py is the final version of my code; train.py and run_all.sh were my first draft.
 
 ## Results
 results/summary.md
