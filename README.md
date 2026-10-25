@@ -15,8 +15,7 @@ The test set is never augmented.
 ## Run
 ```bash
 pip install -r requirements.txt
-./run_all.sh            # all 6 experiments, then writes results/summary.md
-# or a single one:
+./run_all.sh           
 python train.py --model cnn --augment
 pip install -r requirements.txt
 python train_test.py
