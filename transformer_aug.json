@@ -1,0 +1,60 @@
+{
+  "model": "transformer",
+  "augmentation": true,
+  "epochs": 10,
+  "parameters": 72074,
+  "final_test_accuracy": 96.4,
+  "train_seconds": 256.8,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.4422552807807922,
+      "test_acc": 80.62
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7876522364616394,
+      "test_acc": 87.61
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.581834048875173,
+      "test_acc": 91.32
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.47316222456296286,
+      "test_acc": 93.21
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.4029954212665558,
+      "test_acc": 93.63
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.35308088075319927,
+      "test_acc": 94.76
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.31942403434117633,
+      "test_acc": 95.13
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.292391051419576,
+      "test_acc": 95.85
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.2681425831635793,
+      "test_acc": 96.3
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.26177003831863405,
+      "test_acc": 96.4
+    }
+  ]
+}
